@@ -76,7 +76,7 @@
 							a: $("#txt_apellidos").val().toUpperCase(),
 							f: $("#txt_fnac").val(),
 							t: $("#txt_telefono").val(),
-							e: $("#txt_email)".val()
+							e: $("#txt_email").val()
 						},
 						url: $("#frm_persona").prop("action"),
 						type: 'post',
@@ -89,7 +89,7 @@
 									icon:"success"
 								});
 								$("#frm_persona")[0].reset(); //se limpian los campos
-								var table = $("#tabla_detalles").dataTable();
+								var table = $("#tabla_detalles").DataTable();
 								table.ajax.reload();
 							}else{
 								Swal.fire({
@@ -102,8 +102,8 @@
 						error: function(xhr,textStatus,error){
 							alert(error);
 						}
-					));
 				});
+			});
 						//FIN DEL EVENTO
 
 						$("#tabla_detalles").dataTable({
